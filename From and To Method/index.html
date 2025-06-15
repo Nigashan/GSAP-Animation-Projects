@@ -15,7 +15,7 @@
     <div class="progress"></div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script>
         const progress = document.querySelector(".progress")
@@ -23,8 +23,21 @@
         gsap.to(progress,{
             width:"100%",
             duration:2,
-            
+            ease:"power4.out"
         } )
+
+        gsap.from("h1",{
+            y:-200,
+            duration:2,
+            ease: "elastic.out(1,0.3)"
+        })
+
+        gsap.to(progress,{
+            delay:2,
+            height:"100%",
+            top:0,
+            backgroundColor:"white"
+        })
 
     </script>
 </body>
