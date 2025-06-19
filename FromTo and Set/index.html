@@ -28,11 +28,19 @@
             paused:true
         }) 
 
+        let tween2 = gsap.to('p',{
+            fontSize : 'clamp(5rem,5vw,10rem)',
+            x : 0,
+            paused : true
+        })
+
         container.addEventListener('mouseenter',()=>{
            tween.play()
+           tween2.play()
         })
 
         container.addEventListener('mouseleave',()=>{
+           tween.reverse()
            tween.reverse()
         })
 
