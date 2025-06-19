@@ -21,11 +21,19 @@
 
         const container = document.querySelector('.container')
 
-        gsap.to(container,{
-            borderRadius:"50%",
-            width:"16vw",
-            height:"16vw",
+        let tween = gsap.to(container,{
+            borderRadius:"2%",
+            width:"20vw",
+            height:"28vw",
             paused:true
+        }) 
+
+        container.addEventListener('mouseenter',()=>{
+           tween.play()
+        })
+
+        container.addEventListener('mouseleave',()=>{
+           tween.reverse()
         })
 
     </script>
